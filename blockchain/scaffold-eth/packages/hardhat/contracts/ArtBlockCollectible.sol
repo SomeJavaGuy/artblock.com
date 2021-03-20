@@ -31,7 +31,6 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     enum PledgeState { Pledging, Baking, Collecting }
     PledgeState private _pledgeState;
 
-    // When the pledge enters the Collecting state
     // The artist can modify the URIs of all the minted tokens only after the pledge enters the Baking state
     // AP1 token belongs to the Artist
     address public artistAddress;
