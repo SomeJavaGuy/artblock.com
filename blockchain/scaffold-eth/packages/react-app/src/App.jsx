@@ -160,11 +160,11 @@ function App(props) {
 
 
   // keep track of a variable from the contract in the local React state:
-  const balance = useContractReader(readContracts,"YourCollectible", "balanceOf", [ address ])
+  const balance = useContractReader(readContracts,"ArtBlockCollectible", "balanceOf", [ address ])
   console.log("🤗 balance:",balance)
 
   //📟 Listen for broadcast events
-  const transferEvents = useEventListener(readContracts, "YourCollectible", "Transfer", localProvider, 1);
+  const transferEvents = useEventListener(readContracts, "ArtBlockCollectible", "Transfer", localProvider, 1);
   console.log("📟 Transfer events:",transferEvents)
 
 
@@ -181,9 +181,9 @@ function App(props) {
       for(let tokenIndex=0;tokenIndex<balance;tokenIndex++){
         try{
           console.log("GEtting token index",tokenIndex)
-          const tokenId = await readContracts.YourCollectible.tokenOfOwnerByIndex(address, tokenIndex)
+          const tokenId = await readContracts.ArtBlockCollectible.tokenOfOwnerByIndex(address, tokenIndex)
           console.log("tokenId",tokenId)
-          const tokenURI = await readContracts.YourCollectible.tokenURI(tokenId)
+          const tokenURI = await readContracts.ArtBlockCollectible.tokenURI(tokenId)
           console.log("tokenURI",tokenURI)
 
           const ipfsHash =  tokenURI.replace("https://ipfs.io/ipfs/","")
@@ -291,7 +291,7 @@ function App(props) {
 
         <Menu style={{ textAlign:"center" }} selectedKeys={[route]} mode="horizontal">
           <Menu.Item key="/">
-            <Link onClick={()=>{setRoute("/")}} to="/">YourCollectibles</Link>
+            <Link onClick={()=>{setRoute("/")}} to="/">ArtBlock Collectibles</Link>
           </Menu.Item>
           <Menu.Item key="/transfers">
             <Link onClick={()=>{setRoute("/transfers")}} to="/transfers">Transfers</Link>

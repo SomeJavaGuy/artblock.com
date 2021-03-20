@@ -16,7 +16,7 @@ const main = async () => {
 
   console.log("\n\n 🎫 Minting to "+toAddress+"...\n");
 
-  const yourCollectible = await ethers.getContractAt('YourCollectible', fs.readFileSync("./artifacts/YourCollectible.address").toString())
+  const yourCollectible = await ethers.getContractAt('ArtBlockCollectible', fs.readFileSync("./artifacts/ArtBlockCollectible.address").toString())
 
 
   const buffalo = {

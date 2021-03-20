@@ -4,23 +4,23 @@ const { solidity } = require("ethereum-waffle");
 
 use(solidity);
 
-describe("My Dapp", function () {
+describe("Art Block Dapp", function () {
   let myContract;
 
-  describe("YourContract", function () {
-    it("Should deploy YourContract", async function () {
-      const YourContract = await ethers.getContractFactory("YourContract");
+  describe("ArtBlockCollectible Test Suite", function () {
+    it("Should deploy ArtBlockCollectible", async function () {
+      const YourContract = await ethers.getContractFactory("ArtBlockCollectible");
 
       myContract = await YourContract.deploy();
     });
 
-    describe("setPurpose()", function () {
-      it("Should be able to set a new purpose", async function () {
-        const newPurpose = "Test Purpose";
-
-        await myContract.setPurpose(newPurpose);
-        expect(await myContract.purpose()).to.equal(newPurpose);
-      });
-    });
+    // describe("setPurpose()", function () {
+    //   it("Should be able to set a new purpose", async function () {
+    //     const newPurpose = "Test Purpose";
+    //
+    //     await myContract.setPurpose(newPurpose);
+    //     expect(await myContract.purpose()).to.equal(newPurpose);
+    //   });
+    // });
   });
 });
