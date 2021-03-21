@@ -82,7 +82,7 @@ contract ArtBlockCollectible is ERC721, Ownable, ReentrancyGuard {  // the curat
         require(minGoal_ > 0, "ArtBlockCollectible: min goal should be greater than 0");
         minGoal = minGoal_;
 
-        require(minGoal_ > 0, "ArtBlockCollectible: min pledge should be greater than 0");
+        require(minPledge_ > 0, "ArtBlockCollectible: min pledge should be greater than 0");
         minPledge = minPledge_;
 
         require(maxEditions_ > 0, "ArtBlockCollectible: max editions should be greater than 0");
