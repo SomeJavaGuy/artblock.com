@@ -5,6 +5,7 @@ pragma solidity >=0.6.0 <0.7.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "hardhat/console.sol";
 //learn more: https://docs.openzeppelin.com/contracts/3.x/erc721
 
 // GET LISTED ON OPENSEA: https://testnets.opensea.io/get-listed/step-two
@@ -30,6 +31,7 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     // The transition can only happen this way: Pledging -> Baking -> Collecting
     enum PledgeState { Pledging, Baking, Collecting }
     PledgeState private _pledgeState;
+    // TODO: Sandu to define the refunding state (what happens if the goal is not reached or the work is not delivered)
 
     // The artist can modify the URIs of all the minted tokens only after the pledge enters the Baking state
     // AP1 token belongs to the Artist
@@ -41,11 +43,11 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     uint256 public startTime;
     uint256 public endTime;
 
-    uint256 public minGoal;      // TODO: maybe use uint32, dunno
+    uint256 public minGoal;      // all amounts are in WEI
     uint256 public maxEditions;  // TODO: maybe use uint32, dunno
 
     using Counters for Counters.Counter;
-    Counters.Counter private _tokenIds;
+    Counters.Counter private _tokenIdCounter;
 
     string public pledgeBaseUri;
     string public bakeBaseUri;
@@ -60,11 +62,14 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
         uint256 endTime_,
         uint256 minGoal_,
         uint256 maxEditions_,
-        string  pledgeBaseUri_,
-        string  bakeBaseUri_
+        string memory pledgeBaseUri_,
+        string memory bakeBaseUri_
     )
     public
     ERC721("ArtBlockCampaign", "ABLK") {
+
+        // transfer the ownership to the curator right away
+        transferOwnership(curatorAddress_);
 
         require(artistAddress_ != address(0), "ArtBlockCollectible: invalid artist address");
         artistAddress = artistAddress_;
@@ -80,20 +85,26 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
         require(minGoal_ > 0, "ArtBlockCollectible: min goal should be greater than 0");
         minGoal = minGoal_;
 
-        require(maxEditions > 0, "ArtBlockCollectible: max editions should be greater than 0");
+        require(maxEditions_ > 0, "ArtBlockCollectible: max editions should be greater than 0");
         maxEditions = maxEditions_;
 
         pledgeBaseUri = pledgeBaseUri_;
         bakeBaseUri = bakeBaseUri_;
+        _setBaseURI(pledgeBaseUri);
         // TODO: make sure the strings are not empty and they are valid URLs
 
         _pledgeState = PledgeState.Pledging;
-        _setBaseURI(pledgeBaseUri);
+        LogStateChanged(_pledgeState);
 
-        // transfer the ownership to the curator right away
-        transferOwnership(curatorAddress_);
+        // mint edition 0 to artist
+        _mint(artistAddress, _tokenIdCounter.current());
+        _setTokenURI(_tokenIdCounter.current(), pledgeBaseUri);
     }
 
+    // EVENTS
+    event LogCollectorPledged(address pledger, uint256 amount);
+    event LogTokenUriUpdated(uint256 tokenId, string newUri);
+    event LogStateChanged(PledgeState newPledgeState);
 
     // MODIFIERS
     modifier whilePledging() {
@@ -103,28 +114,74 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
         _;
     }
 
-    // EVENTS
-    event LogCollectorPledged(address pledger, uint256 amount);
+    modifier whileBacking() {
+        require(_pledgeState == PledgeState.Baking, "Contract does not accept pledges");
+        require(now > endTime, "The pledge window is open");
+        _;
+    }
 
+    modifier onlyArtist() {
+        require(msg.sender == artistAddress, "Only the artist can do this");
+        _;
+    }
 
-    function pledge()
-    whilePledging
-    payable
-    public
-    returns (uint256) {
+    modifier onlyCurator() {
+        require(msg.sender == owner(), "Only the curator can do this");
+        _;
+    }
+
+    // anyone can call this
+    function refreshState() public {
+        if (_pledgeState == PledgeState.Pledging) {
+            if ( address(this).balance >= minGoal && now > endTime) {
+                _pledgeState = PledgeState.Baking;  // transition to baking
+                LogStateChanged(_pledgeState);
+            }
+        }
+    }
+
+    // the collector
+    function pledge() whilePledging payable public returns (uint256) {
+
+        require(msg.value > 0, "The pledge cannot be zero");
+
+        _tokenIdCounter.increment();
+        require(_tokenIdCounter.current() <= maxEditions, "Number of NFTs exceeded the max number of editions");
+
+        _mint(msg.sender, _tokenIdCounter.current());
+        _setTokenURI(_tokenIdCounter.current(), pledgeBaseUri);
 
         // record who pledged and how much
         _pledgedBalance[msg.sender] = msg.value;
-
-        // now mint the token now
-        _tokenIds.increment();
-
-        uint256 id = _tokenIds.current();
-        _mint(to, id);
-        _setTokenURI(id, pledgeBaseUri);
-
         LogCollectorPledged(msg.sender, msg.value);
 
-        return id;
+        // return the token id so the backend can use it
+        return _tokenIdCounter.current();
+    }
+
+    // the artist - only during the baking state
+    function updateTokenUri(uint256 tokenId, string memory newUri) onlyArtist whileBacking public {
+        // TODO: make sure the new uri starts with pledgeBaseUri
+        _setTokenURI(tokenId, newUri);
+        LogTokenUriUpdated(tokenId, newUri);
+    }
+
+    // the curator - this is the final state
+    function markAsCollecting(string memory ap1Uri, string memory ap2Uri) onlyCurator whileBacking public {
+        // TODO: enforce the condition that all tokens have new uris, by using a counter or something
+        _pledgeState = PledgeState.Collecting;
+        LogStateChanged(_pledgeState);
+
+        // mint ap1
+        _tokenIdCounter.increment();
+        _mint(artistAddress, _tokenIdCounter.current());
+        _setTokenURI(_tokenIdCounter.current(), ap1Uri);
+
+        // mint ap2
+        _tokenIdCounter.increment();
+        _mint(galleryAddress, _tokenIdCounter.current());
+        _setTokenURI(_tokenIdCounter.current(), ap2Uri);
+
+        // TODO: I guess transfer the ether amount to the artist?, Sandu, pls confirm.
     }
 }
