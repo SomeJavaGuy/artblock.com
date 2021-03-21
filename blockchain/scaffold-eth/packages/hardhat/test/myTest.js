@@ -51,5 +51,15 @@ describe("ArtBlockCollectible Test", function () {
             expect(await theContract.balanceOf(pledger2.address)).to.equal(1);
             expect(await theContract.pledgeState()).to.equal(0, "The expected state is pledging");
         });
+
+        it("Pledger 3 should NOT be able make a pledge", async function () {
+            expect(await theContract.connect(pledger3).pledge({value: ethers.utils.parseEther("1")})).should.be.rejected
+        });
+
+        it("Pledger 4 should be able make a pledge", async function () {
+            let tokenId = await theContract.connect(pledger4).pledge({value: ethers.utils.parseEther("10.5")});
+            expect(await theContract.balanceOf(pledger4.address)).to.equal(1);
+            expect(await theContract.pledgeState()).to.equal(0, "The expected state is pledging");
+        });
     });
 });

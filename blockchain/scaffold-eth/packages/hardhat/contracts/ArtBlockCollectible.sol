@@ -156,8 +156,8 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
         _mint(msg.sender, _tokenIdCounter.current());
         _setTokenURI(_tokenIdCounter.current(), pledgeBaseUri);
 
-        // record who pledged and how much
-        _pledgedBalance[msg.sender] = msg.value;
+        // record who pledged and how much (accumulate if the same user pledged again)
+        _pledgedBalance[msg.sender] = _pledgedBalance[msg.sender] + msg.value;
         LogCollectorPledged(msg.sender, msg.value);
 
         // return the token id so the backend can use it
