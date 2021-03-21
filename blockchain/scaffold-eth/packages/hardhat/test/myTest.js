@@ -16,7 +16,9 @@ describe("ArtBlockCollectible Test", function () {
     let pledger5;
     let others;
 
-    beforeEach(async function () {
+    before(async function () {
+        console.log('executing this');
+
         [curator, artist, gallery, pledger1, pledger2, pledger3, pledger4, pledger5,...others] = await ethers.getSigners();
 
         const ArtBlockCollectible = await ethers.getContractFactory("ArtBlockCollectible");
@@ -63,7 +65,6 @@ describe("ArtBlockCollectible Test", function () {
         });
 
         it("The state should be baking now", async function () {
-            let tokenId = await theContract.connect(pledger4).pledge({value: ethers.utils.parseEther("10.5")});
             await theContract.refreshState();
             expect(await theContract.pledgeState()).to.equal(1, "The expected state is baking");
         });
