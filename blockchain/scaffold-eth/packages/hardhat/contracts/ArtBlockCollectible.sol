@@ -138,7 +138,7 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     // anyone can call this
     function refreshState() public {
         if (pledgeState == PledgeState.Pledging) {
-            if ( address(this).balance >= minGoal ) {
+            if ( address(this).balance >= minGoal && now > endTime) {
                 pledgeState = PledgeState.Baking;  // transition to baking
                 LogStateChanged(pledgeState);
             }
