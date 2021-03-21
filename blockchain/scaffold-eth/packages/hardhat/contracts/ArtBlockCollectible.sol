@@ -44,6 +44,7 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     uint256 public endTime;
 
     uint256 public minGoal;      // all amounts are in WEI
+    uint256 public minPledge;      // all amounts are in WEI
     uint256 public maxEditions;  // TODO: maybe use uint32, dunno
 
     using Counters for Counters.Counter;
@@ -61,6 +62,7 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
         uint256 startTime_,
         uint256 endTime_,
         uint256 minGoal_,
+        uint256 minPledge_,
         uint256 maxEditions_,
         string memory pledgeBaseUri_,
         string memory bakeBaseUri_
@@ -84,6 +86,9 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
 
         require(minGoal_ > 0, "ArtBlockCollectible: min goal should be greater than 0");
         minGoal = minGoal_;
+
+        require(minGoal_ > 0, "ArtBlockCollectible: min pledge should be greater than 0");
+        minPledge = minPledge_;
 
         require(maxEditions_ > 0, "ArtBlockCollectible: max editions should be greater than 0");
         maxEditions = maxEditions_;
@@ -114,7 +119,7 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
         _;
     }
 
-    modifier whileBacking() {
+    modifier whileBaking() {
         require(pledgeState == PledgeState.Baking, "Contract does not accept pledges");
         require(now > endTime, "The pledge window is open");
         _;
@@ -143,7 +148,7 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     // the collector
     function pledge() whilePledging payable public returns (uint256) {
 
-        require(msg.value > 0, "The pledge cannot be zero");
+        require(msg.value >= minPledge, "The pledge needs to be greater or equal to the min pledge");
 
         _tokenIdCounter.increment();
         require(_tokenIdCounter.current() <= maxEditions, "Number of NFTs exceeded the max number of editions");
@@ -160,13 +165,13 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     }
 
     // the artist - only during the baking state
-    function updateTokenUri() onlyArtist whileBacking public {
+    function updateTokenUri() onlyArtist whileBaking public {
         _setBaseURI(bakeBaseUri);
         LogTokenBaseUriUpdated(bakeBaseUri);
     }
 
     // the curator - this is the final state
-    function markAsCollecting(string memory ap1Uri, string memory ap2Uri) onlyCurator whileBacking public {
+    function markAsCollecting(string memory ap1Uri, string memory ap2Uri) onlyCurator whileBaking public {
         pledgeState = PledgeState.Collecting;
         LogStateChanged(pledgeState);
 
