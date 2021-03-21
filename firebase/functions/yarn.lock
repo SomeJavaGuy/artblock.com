@@ -389,6 +389,50 @@
   dependencies:
     eslint-visitor-keys "^1.1.0"
 
+"@web-std/blob@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@web-std/blob/-/blob-2.0.0.tgz#603af17bd5996590daba6b65795acb5206571728"
+  integrity sha512-i4JdX5sli14KQra9wYo2a/wap5SICp4c20EdGTzPDxUbXLPrPIsH5IplUizKeBXNRAtxKDenp+kCNukVs3FyNA==
+  dependencies:
+    web-encoding "1.1.0"
+    web-streams-polyfill "2.1.1"
+
+"@web-std/blob@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@web-std/blob/-/blob-2.0.1.tgz#ecf95e0a9696cc95721a8659b9bd67ea705ef97f"
+  integrity sha512-eyRgoKhJQ6BYEpMeO4hJNKKwpcS1NYqJy5Mw69mgmjUDsu8bCKn7L5JUTXL+T3z3QpgISOJsboX2UchRyTxd/A==
+  dependencies:
+    web-encoding "1.1.0"
+    web-streams-polyfill "2.1.1"
+
+"@web-std/fetch@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@web-std/fetch/-/fetch-1.0.0.tgz#c3346d6d4ec4cf8563365ca3d6ec5f052ac0f06e"
+  integrity sha512-ghp1XUrJf1Ue4hSMC5In6b1osL+iYmyqIFNS4c/3sIsBjX3j6doWG1hXCEQYk88OwXLbSzAIc6q0mBnIbkUVjg==
+  dependencies:
+    data-uri-to-buffer "^3.0.1"
+    fetch-blob "^2.1.1"
+
+"@web-std/file@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@web-std/file/-/file-1.0.1.tgz#75db92071574e893ad66bdc1d282db97a6dfb89d"
+  integrity sha512-XAgUci2QDWb+HLtZnujP4kBmW4aYGYHAVimN4hn6tK0tMKsZi3e1teguy/e2ZXdimvrXMq8Dt9UPHUdRcY28iQ==
+  dependencies:
+    "@web-std/blob" "2.0.0"
+
+"@web-std/form-data@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@web-std/form-data/-/form-data-2.0.0.tgz#15553cc573aff0e030ef9dfb5bd4128ed74bf7a7"
+  integrity sha512-zgLBe6QZUhl3Mk0jKJ9vWLdv9sykq7lVRHazQyJw4fZOVYltJ4WdJsxC+Jd2br+qkWJTppNORzyMK/0ayy4AOw==
+  dependencies:
+    web-encoding "1.1.0"
+    web-streams-polyfill "2.1.1"
+
+"@zxing/text-encoding@0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@zxing/text-encoding/-/text-encoding-0.9.0.tgz#fb50ffabc6c7c66a0c96b4c03e3d9be74864b70b"
+  integrity sha512-U/4aVJ2mxI0aDNI8Uq0wEhMgY+u4CNtEb0om3+y3+niDAsoTCOB33UF0sxpzqzdqXLqmvc+vZyAt4O8pPdfkwA==
+
 abort-controller@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/abort-controller/-/abort-controller-3.0.0.tgz#eaf54d53b62bae4138e809ca225c8439a6efb392"
@@ -689,6 +733,11 @@ crypto-random-string@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-2.0.0.tgz#ef2a7a966ec11083388369baa02ebead229b30d5"
   integrity sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==
+
+data-uri-to-buffer@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/data-uri-to-buffer/-/data-uri-to-buffer-3.0.1.tgz#594b8973938c5bc2c33046535785341abc4f3636"
+  integrity sha512-WboRycPNsVw3B3TL559F7kuBUM4d8CgMEvk6xEJlOp7OBPjt6G7z8WMWlD2rOFZLk6OYfFIUGsCOWzcQH9K2og==
 
 date-and-time@^0.14.2:
   version "0.14.2"
@@ -1087,6 +1136,11 @@ faye-websocket@0.11.3:
   integrity sha512-D2y4bovYpzziGgbHYtGCMjlJM36vAl/y+xUyn1C+FVx8szd1E+86KwVw6XvYSzOP8iMpm1X0I4xJD+QtUb36OA==
   dependencies:
     websocket-driver ">=0.5.1"
+
+fetch-blob@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/fetch-blob/-/fetch-blob-2.1.1.tgz#a54ab0d5ed7ccdb0691db77b6674308b23fb2237"
+  integrity sha512-Uf+gxPCe1hTOFXwkxYyckn8iUSk6CFXGy5VENZKifovUTZC9eUODWSBhOBS7zICGrAetKzdwLMr85KhIcePMAQ==
 
 file-entry-cache@^6.0.1:
   version "6.0.1"
@@ -1839,6 +1893,16 @@ negotiator@0.6.2:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
 
+nft.storage@^0.3.8:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/nft.storage/-/nft.storage-0.3.8.tgz#2b13a09a937faeda4db03555833a54530e38fceb"
+  integrity sha512-sVQhfyGuKixK1otUunYvVoN5LiWUluXo5/L3EkfApc2Axxq2EPeAPC7u+GChoYceZJzExPlUejRgj0+fRAZAxA==
+  dependencies:
+    "@web-std/blob" "2.0.1"
+    "@web-std/fetch" "1.0.0"
+    "@web-std/file" "1.0.1"
+    "@web-std/form-data" "2.0.0"
+
 node-fetch@^2.3.0, node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
@@ -2532,6 +2596,18 @@ vary@^1, vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+web-encoding@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/web-encoding/-/web-encoding-1.1.0.tgz#b8ed50f0e23ba239542ba11ebe885b75a0b95bea"
+  integrity sha512-KzYonGdJnZB3qvhK8hKca5qXk/wp+hgwGNTY1TnqtF2CzDzpN8szOC3ejhX9+wbhCq3vQs/TjM8BykS1kor0lQ==
+  optionalDependencies:
+    "@zxing/text-encoding" "0.9.0"
+
+web-streams-polyfill@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-2.1.1.tgz#2c82b6193849ccb9efaa267772c28260ef68d6d2"
+  integrity sha512-dlNpL2aab3g8CKfGz6rl8FNmGaRWLLn2g/DtSc9IjB30mEdE6XxzPfPSig5BwGSzI+oLxHyETrQGKjrVVhbLCg==
 
 websocket-driver@>=0.5.1:
   version "0.7.4"

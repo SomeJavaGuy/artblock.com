@@ -2,7 +2,7 @@
   "name": "quasar",
   "version": "0.0.1",
   "description": "NFT tech for artists fundraising to create original art",
-  "productName": "Art🧊Block.com",
+  "productName": "Art Block",
   "author": "alex@artblock.com",
   "private": true,
   "scripts": {
@@ -10,10 +10,15 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@metamask-checker/core": "^1.0.0",
     "@quasar/extras": "^1.0.0",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "quasar": "^2.0.0-beta.1"
+    "ethers": "^5.0.32",
+    "firebase": "^8.3.1",
+    "fortmatic": "^2.2.1",
+    "quasar": "^2.0.0-beta.1",
+    "web3": "^1.3.4"
   },
   "devDependencies": {
     "@quasar/app": "^3.0.0-beta.1",

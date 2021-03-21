@@ -1,0 +1,165 @@
+
+Effective as of: January 1, 2021
+Last Updated: March 21, 2021
+
+1. Introduction
+
+Welcome to the Art Block demonstration website, owned and operated by Art Block, Inc. (“Art Block,” “we,” “us” or “our”). These Terms of Use (these “Terms”) govern your access to and use of the Art Block demonstration website, including, without limitation, the proof of concept functionality, our online and/or mobile services, and software provided on or in connection with those services (collectively, the “Service”).
+
+This Service includes a demo website demonstrating proof of concept for Art Block workflow, processes, ideas, and inventions.  NOTWITHSTANDING ANY SUGGESTION, INDICATION, OR STATEMENT TO THE CONTRARY, NOTHING PROVIDED BY THIS SERVICE OR BY ART BLOCK, INC. EFFECTS OR CAN EFFECT ANY ACTUAL TRANSACTION OR HAS ANY EFFECT ON ANY EXISTING ASSET OR ON RIGHTS IN, TITLE TO, INTEREST IN, OR OWNERSHIP OF SUCH ASSET.  Your use of the demo website indicates your understanding of such terms.
+
+FURTHER, NOTHING PROVIDED BY THIS SERVICE (INCLUDING WITHOUT LIMITATION EXPERIMENTAL OR DEMONSTRATION “TRANSACTIONS” DEMONSTRATED ON THE SERVICE) WILL OR COULD BE HONOURED, GIVEN EFFECT, OR CONSIDERED TO HAVE ANY EFFECT ON OR BY ANY FUTURE SYSTEMS OR TECHNOLOGIES THAT MAY BE DEVELOPED, CREATED, AND/OR IMPLEMENTED BY ART BLOCK, INC.  ART BLOCK IS NOT A BROKER, FINANCIAL INSTITUTION, OR CREDITOR. THE SERVICES PROVIDE A DEMONSTRATION ADMINISTRATIVE PLATFORM ONLY.
+
+YOU BEAR FULL RESPONSIBILITY FOR UNDERSTANDING THE DEMONSTRATION NATURE OF THE SERVICE.  ART BLOCK HAS NO LIABILITY FOR ANY DAMAGES, DIRECT OR INDIRECT, SUSTAINED BY YOU OR ANY THIRD PARTY BASED ON RELIANCE ON ANYTHING PROVIDED BY THIS SERVICE.
+
+From time to time, Art Block may amend or add to these Terms in its sole discretion. If we make changes to these Terms, we will provide notice of such changes, such as by sending an email notification, providing notice through the Service or updating the “Last Updated” date at the beginning of these Terms. By continuing to access or use the Service, you confirm your acceptance of the revised Terms and all of the terms incorporated therein by reference. We encourage you to review the Terms frequently to ensure that you understand the terms and conditions that apply when you access or use the Service. If you do not agree to the revised Terms, you may not access or use the Service.
+
+BY COMPLETING ANY ACCOUNT REGISTRATION PROCESS FOR THIS DEMO WEBSITE, AND/OR USING THE DEMONSTRATION SERVICES, YOU ACKNOWLEDGE THAT YOU HAVE READ AND UNDERSTAND THESE TERMS.
+
+2. Privacy Policy
+
+Please refer to our Privacy Policy [[crosslink]] for information about how we collect, use and share information about you.
+
+3. Ownership
+
+A. The Art Block platform and process are patent pending.
+ 
+B. Unless otherwise indicated in writing by us, the Service and all content and other materials contained therein, including, without limitation, the Art Block logo and all designs, text, graphics, pictures, information, data, software, sound files, other files and the selection and arrangement thereof (collectively, “Content”) are the proprietary property of Art Block or our affiliates as applicable.
+
+C. Notwithstanding anything to the contrary in these Terms, the Service and Content may include software components provided by Art Block or its affiliates or a third party that are subject to separate license terms. In such cases, those separate license terms will govern such software components.
+
+D. Art Block™, Art Block, Inc.™, the Art Block logo and any Art Block product or service names, logos or slogans that may appear on the Service are trademarks and/or tradenames of Art Block or our affiliates and may not be copied, imitated or used, in whole or in part, without our prior written permission. You may not use any metatags or other “hidden text” utilizing “Art Block” or any other name, trademark or product or service name of Art Block or our affiliates without our prior written permission. In addition, the look and feel of the Service and Content, including, without limitation, all page headers, custom graphics, button icons and scripts, constitute the service mark, trademark or trade dress of Art Block and may not be copied, imitated or used, in whole or in part, without our prior written permission. All other trademarks, registered trademarks, product names and Art Block names or logos mentioned on the Service are the property of their respective owners and may not be copied, imitated or used, in whole or in part, without the permission of the applicable trademark holder. Reference to any products, services, processes or other information by name, trademark, manufacturer, supplier or otherwise does not constitute or imply endorsement, sponsorship or recommendation by Art Block.
+
+E. Any feedback you may provide to Art Block in any form regarding the Service shall be the property and confidential information of Art Block.  You expressly acknowledge Art Block’s ownership of such feedback and Art Block’s sole and exclusive right to develop, build, design, invent, and seek protection for any invention or any other intellectual property, as may be protected or protectible by any law or legal principle anywhere in the world, that may be based on or related to such feedback.  You expressly waive any rights you may have in such feedback, including moral rights, in favour of Art Block.
+
+4. License to Access and Use Our Service and Content
+
+You are hereby granted a limited, nonexclusive, nontransferable, non-sublicensable license to access and use the Service and Content; provided, however, that such license is subject to these Terms and does not include any right to (a) sell, resell or use commercially the Service or Content, (b) distribute, publicly perform or publicly display any Content, (c) modify or otherwise make any derivative uses of the Service or Content, or any portion thereof, (d) use any data mining, robots or similar data gathering or extraction methods, (e) download (other than page caching) any portion of the Service or Content, except as expressly permitted by us, and (f) use the Service or Content other than for their intended purposes.
+
+5. Hyperlinks
+
+You are granted a limited, nonexclusive, nontransferable right to create a text hyperlink to the Service for noncommercial purposes, provided that such link does not portray the Service other than as a demonstration / experimental service that cannot effect any transaction and provided that such link does not in any other way portray Art Block or our affiliates or any of our products or services in any false, misleading, derogatory or otherwise defamatory manner, and provided further that the linking site does not contain any adult or illegal material or any material that is offensive, harassing or otherwise objectionable. This limited right may be revoked at any time. You may not use a logo or other proprietary graphic of Art Block to link to the Service or Content without our express written permission. Further, you may not use, frame or utilize framing techniques to enclose any Art Block trademark, logo or other proprietary information, including the images found on the Service, the content of any text or the layout or design of any page, or form contained on a page, on the Service without our express written consent.
+
+6. Third Party Services
+
+The Service may contain links to third-party websites (“Third-Party Websites”) and applications (“Third-Party Applications”). When you click on a link to a Third-Party Website or Third-Party Application, we will not warn you that you have left our Service and are subject to the terms and conditions (including privacy policies) of another website or destination. Such Third-Party Websites and Third-Party Applications and are not under the control of Art Block. Art Block is not responsible for any Third-Party Websites or Third-Party Applications. Art Block provides these Third-Party Websites and Third-Party Applications only as a convenience and does not review, approve, monitor, endorse, warrant, or make any representations with respect to Third-Party Websites or Third-Party Applications, or their products or services. You use all links in Third-Party Websites, and Third-Party Applications at your own risk. When you leave our Service, our Terms and policies no longer govern. You should review all applicable agreements and policies, including privacy and data gathering practices, of any Third-Party Websites or Third-Party Applications, and should make whatever investigation you feel necessary or appropriate before proceeding with any transaction with any third party.
+
+7. User Conduct
+
+You agree that you will not violate any law, contract, intellectual property or other third party right, and that you are solely responsible for your conduct, while accessing or using the Service in any way. You agree that you will abide by these Terms and will not:
+
+A. Portray the Service as a non-demonstration service or in any other way suggest that the Service can be used for any non-demonstration purpose or otherwise mislead anyone as to the nature of the Service;  
+
+B. Provide false or misleading information to Art Block or any other user of Art Block in relation to your or their use of the Service;
+
+C. Use the Service in any manner that could interfere with, disrupt, negatively affect or inhibit other users from fully enjoying the Service, or that could damage, disable, overburden or impair the functioning of the Service in any manner;
+
+D. Develop, utilize, or disseminate any software, or interact with any API in any manner, that could damage, harm, or impair the Service;
+
+E. Reverse engineer any aspect of the Service, or do anything that might discover source code or bypass or circumvent measures employed to prevent or limit access to any Service, area or code of the Service;
+
+F. Attempt to circumvent any content-filtering techniques we employ, or attempt to access any feature or area of the Service that you are not authorized to access;
+
+G. Use any robot, spider, crawler, scraper, script, browser extension, offline reader or other automated means or interface not authorized by us to access the Service, extract data or otherwise interfere with or modify the rendering of Service pages or functionality;
+
+H. Use data collected from our Service to contact individuals, companies, or other persons or entities;
+
+I. Use data collected from our Service for any direct marketing activity (including without limitation, email marketing, SMS marketing, telemarketing, and direct marketing);
+
+J. Bypass or ignore instructions that control all automated access to the Service; or
+
+K. Use the Service for any illegal or unauthorized purpose, or engage in, encourage or promote any activity that violates these Terms.
+
+Art Block reserves the unlimited right to allow or disallow certain uses of and/or users from the Service, in its sole discretion. Should Art Block disallow a use or user except in violation of the Terms, Art Block will endeavour to provide an explanation of the decision, but is in no way required to do so. Art Block reserves the right to destroy material stored on our servers at any time and for any reason.
+
+Any material, including metadata of material stored elsewhere, that: violates international or Canadian intellectual property laws, promotes suicide or self-harm, incites hate or violence against others, degrades or doxxes another individual, depicts minors in sexually suggestive situations, or is otherwise illegal in Canada is prohibited on Art Block and will be removed. Material created or used primarily or substantially for the purpose of raising funds for known terrorist organizations is prohibited on Art Block and will be removed.
+
+We require all users to be 18 years old or older. If you are under 18, you may use a parent or guardian's Art Block account, but only with involvement of the account holder. However, the account holder is responsible for everything done with that account.
+
+If you become aware of the creation, listing, or buying of assets in violation of any of the terms specified in this section, you shall contact us hello@artblock.com to report it. Content creators bear special responsibility for informing Art Block of the existence of their collections, contracts, and assets that violate these terms.
+
+2. User Content and Copyright
+
+You are solely responsible for your use of the Services and for any Content you provide, including compliance with applicable laws, rules, and regulations. We take no responsibility for the Content posted or listed via the Services.  You are solely responsible for monitoring the use of Content you submit, post, or display. 
+
+You retain your rights to any Content you submit, post, or display using the Services.
+
+By submitting, posting or displaying Content on or through the Services, you grant us a worldwide, non-exclusive, royalty-free license (with the right to sublicense) to use, copy, reproduce, process, adapt, modify, publish, transmit, display and distribute such Content in any and all media or distribution methods (now known or later developed). This license authorizes us to make your Content available to the rest of the world and to let others do the same. You agree that this license includes the right for Art Block to provide, promote, and improve the Services and to make Content submitted to or through the Services available to other companies, organizations or individuals for the distribution, promotion or publication of such Content on other media and services. Such additional uses by Art Block, or other companies, organizations or individuals, may be made with no compensation paid to you with respect to the Content that you submit, post, transmit or otherwise make available through the Services.
+
+Art Block does not claim that submitting, posting or displaying Content on or through the Services gives Art Block any ownership or resale rights in your Content. 
+
+You represent and warrant that you have, or have obtained, all rights, licenses, consents, permissions, power and/or authority necessary to grant the rights granted herein for any Content that you submit, post or display on or through the Services. You agree that such Content will not contain material subject to copyright or other proprietary rights, unless you have necessary permission or are otherwise legally entitled to post the material and to grant Art Block the license described above.
+
+Art Block reserves the right to remove content without prior notice. Art Block will take down works in response to formal infringement claims and will terminate a user's access to the Services if the user is determined to be a repeat infringer.
+
+If you believe that your content has been copied in a way that constitutes copyright infringement, please report this by contacting our designated copyright agent at:
+
+Copyright Agent of Art Block, Inc.
+Email: hello@artblock.com We suggest designating an email alias to handle copyright issues.
+Formal infringement claims regarding content on the Services must include:
+
+A. A written communication delivered to the agent designated above;
+
+B. A physical or electronic signature of someone authorized to act on behalf of the copyright owner;
+
+C. Identification of the copyrighted work(s) allegedly infringed;
+
+D. Identification of material claimed to be infringing, reasonably sufficient to permit Company to locate the material;
+
+E. Information reasonably sufficient to permit Company to contact the complaining party. This can be an address, phone number, email address, or other suitable method of contact;
+
+F. A statement that the “complaining party has a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent or the law; and”
+
+G. A statement that the information in the notice is accurate and, under penalty of perjury, that the complaining party is authorized to act on behalf of copyright owner.
+
+3. Indemnification
+
+To the fullest extent permitted by applicable law, you agree to indemnify, defend and hold harmless Art Block, and our respective past, present and future employees, officers, directors, contractors, consultants, equity holders, suppliers, vendors, service providers, parent companies, subsidiaries, affiliates, agents, representatives, predecessors, successors and assigns (individually and collectively, the “Art Block Parties”), from and against all actual or alleged third party claims, damages, awards, judgments, losses, liabilities, obligations, penalties, interest, fees, expenses (including, without limitation, attorneys’ fees and expenses) and costs (including, without limitation, court costs, costs of settlement and costs of pursuing indemnification and insurance), of every kind and nature whatsoever, whether known or unknown, foreseen or unforeseen, matured or unmatured, or suspected or unsuspected, in law or equity, whether in tort, contract or otherwise (collectively, “Claims”), including, but not limited to, damages to property or personal injury, that are caused by, arise out of or are related to (a) your use or misuse of the Service or Content, (b) any feedback you provide to Art Block, (c) your violation of these Terms, and (d) your violation of the rights of a third party, including another user. You agree to promptly notify Art Block of any third-party Claims and cooperate with the Art Block Parties in defending such Claims. You further agree that the Art Block Parties shall have control of the defense or settlement of any third-party Claims. THIS INDEMNITY IS IN ADDITION TO, AND NOT IN LIEU OF, ANY OTHER INDEMNITIES SET FORTH IN A WRITTEN AGREEMENT BETWEEN YOU AND ART BLOCK, INCLUDING OTHER INDEMNITIES HEREIN.
+
+4. Disclaimers
+
+THE SERVICE AND CONTENT CONTAINED THEREIN ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED. ART BLOCK (AND ITS SUPPLIERS) MAKE NO WARRANTY THAT THE SERVICE: (A) WILL MEET YOUR REQUIREMENTS; (B) WILL BE AVAILABLE ON AN UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE BASIS; OR (C) WILL BE ACCURATE, RELIABLE, COMPLETE, LEGAL, OR SAFE. ART BLOCK DISCLAIMS ALL OTHER WARRANTIES OR CONDITIONS, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT AS TO THE SERVICE, CONTENT CONTAINED THEREIN. ART BLOCK DOES NOT REPRESENT OR WARRANT THAT CONTENT ON THE SERVICE IS ACCURATE, COMPLETE, RELIABLE, CURRENT OR ERROR-FREE. WE WILL NOT BE LIABLE FOR ANY LOSS OF ANY KIND FROM ANY ACTION TAKEN OR TAKEN IN RELIANCE ON MATERIAL OR INFORMATION, CONTAINED ON THE SERVICE. WHILE ART BLOCK ATTEMPTS TO MAKE YOUR ACCESS TO AND USE OF THE SERVICE AND CONTENT SAFE, ART BLOCK CANNOT AND DOES NOT REPRESENT OR WARRANT THAT THE SERVICE OR CONTENT ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. WE CANNOT GUARANTEE THE SECURITY OF ANY DATA THAT YOU DISCLOSE ONLINE. YOU ACCEPT THE INHERENT SECURITY RISKS OF PROVIDING INFORMATION AND DEALING ONLINE OVER THE INTERNET AND WILL NOT HOLD US RESPONSIBLE FOR ANY BREACH OF SECURITY UNLESS IT IS DUE TO OUR GROSS NEGLIGENCE.
+
+WE WILL NOT BE RESPONSIBLE OR LIABLE TO YOU FOR ANY LOSS AND TAKE NO RESPONSIBILITY FOR, AND WILL NOT BE LIABLE TO YOU FOR, ANY USE OF CRYPTO ASSETS, INCLUDING BUT NOT LIMITED TO ANY LOSSES, DAMAGES OR CLAIMS ARISING FROM: (A) USER ERROR SUCH AS FORGOTTEN PASSWORDS, INCORRECTLY CONSTRUCTED TRANSACTIONS, OR MISTYPED ADDRESSES; (B) SERVER FAILURE OR DATA LOSS; (C) YOUR’S OR A THIRD-PARTY’S RELIANCE ON ANYTHING SUGGESTING, INDICATING, OR STATING THAT THE SERVICE IS NOT A DEMONSTRATION SERVICE / PROOF OF CONCEPT OR THAT THE SERVICE DOES OR CAN EFFECT ANY TRANSACTION WHATSOEVER; (D) UNAUTHORIZED ACCESS TO APPLICATIONS; (E) ANY UNAUTHORIZED THIRD-PARTY ACTIVITIES, INCLUDING WITHOUT LIMITATION THE USE OF VIRUSES, PHISHING, BRUTEFORCING OR OTHER MEANS OF ATTACK AGAINST THE SERVICE.
+
+FOR CLARITY, WE DO NOT GUARANTEE THAT ART BLOCK OR ANY ART BLOCK PARTY CAN EFFECT THE TRANSFER OF TITLE OR RIGHT IN ANY CRYPTOGRAPHIC ASSETS.  FOR FURTHER CLARITY, WE GUARANTEE THAT THE SERVICE PROVIDED UNDER THESE TERMS CANNOT EFFECT THE TRANSFER OF TITLE, INTEREST, OR RIGHTS IN OR TO ANY CRYPTOGRAPHIC ASSETS.
+
+Nothing in these Terms shall exclude or limit liability of either party for fraud, death or bodily injury caused by negligence, violation of laws, or any other activity that cannot be limited or excluded by legitimate means.
+
+SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES IN CONTRACTS WITH CONSUMERS, SO THE ABOVE EXCLUSION MAY NOT APPLY TO YOU.
+
+1. Limitation of Liability
+
+TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL ART BLOCK BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY LOST PROFIT OR ANY INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL OR PUNITIVE DAMAGES ARISING FROM THESE TERMS, THE SERVICE, PRODUCTS OR THIRD PARTY SITES AND PRODUCTS, OR FOR ANY DAMAGES RELATED TO LOSS OF REVENUE, LOSS OF PROFITS, LOSS OF BUSINESS OR ANTICIPATED SAVINGS, LOSS OF USE, LOSS OF GOODWILL, OR LOSS OF DATA, AND WHETHER CAUSED BY TORT (INCLUDING NEGLIGENCE), BREACH OF CONTRACT, OR OTHERWISE, EVEN IF FORESEEABLE AND EVEN IF ART BLOCK HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. ACCESS TO, AND USE OF, THE SERVICES, PRODUCTS OR THIRD-PARTY SITES AND PRODUCTS ARE AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR MOBILE DEVICE OR LOSS OF DATA RESULTING THEREFROM.
+
+NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN, IN NO EVENT SHALL THE MAXIMUM AGGREGATE LIABILITY OF ART BLOCK ARISING OUT OF OR IN ANY WAY RELATED TO THESE TERMS, THE ACCESS TO AND USE OF THE SERVICE, CONTENT, OR ANY PRODUCTS OR SERVICES PURCHASED ON THE SERVICE EXCEED $100CAD.
+
+THE FOREGOING LIMITATIONS OF LIABILITY SHALL NOT APPLY TO LIABILITY OF ART BLOCK FOR (A) DEATH OR PERSONAL INJURY CAUSED BY ART BLOCK’S NEGLIGENCE; OR FOR (B) DEATH OR PERSONAL INJURY CAUSED BY ART BLOCK’S FRAUD OR FRAUDULENT MISREPRESENTATION.
+
+Some jurisdictions do not allow the exclusion or limitation of incidental or consequential damages, so the above limitation or exclusion may not apply to you. Some jurisdictions also limit disclaimers or limitations of liability for personal injury from consumer products, so this limitation may not apply to personal injury claims.
+
+2. Modifications to the Service
+
+We reserve the right in our sole discretion to modify, suspend or discontinue, temporarily or permanently, the Services (or any features or parts thereof) at any time and without liability therefore.
+
+1. Governing Law and Venue
+
+These Terms and your access to and use of the Service and Content shall be governed by and construed and enforced in accordance with the laws of the Province of Ontario, without regard to conflict of law rules or principles of the Province of Ontario, or of any other jurisdiction, that would cause the application of the laws of any other jurisdiction. Any dispute between the parties that cannot be heard in small claims court, shall be resolved in the provincial courts of Ontario, sitting in the City of Waterloo.
+
+2. Termination
+
+Notwithstanding anything contained in these Terms, we reserve the right, without notice and in our sole discretion, to terminate your right to access or use the Service at any time and for any or no reason, and you acknowledge and agree that we shall have no liability or obligation to you in such event and that you will not be entitled to a refund of any amounts that you have already paid to us, to the fullest extent permitted by applicable law.
+
+3. Severability
+
+If any term, clause or provision of these Terms is held invalid or unenforceable, then that term, clause or provision will be severable from these Terms and will not affect the validity or enforceability of any remaining part of that term, clause or provision, or any other term, clause or provision of these Terms.
+
+4. Survival
+
+The following sections will survive the expiration or termination of these Terms and the termination of your Account: all defined terms and Sections.
+
+5. Miscellaneous
+
+These Terms constitute the entire agreement between you and Art Block relating to your access to and use of the Services and Content. These Terms, and any rights and licenses granted hereunder, may not be transferred or assigned by you without the prior written consent of Art Block. No decision of Art Block in relation to anything under these Terms shall bind Art Block with respect to any prior, concurrent, or subsequent circumstance. Art Block’s failure to assert any right or provision under these Terms shall not constitute a waiver of such right or provision. Except as otherwise provided herein, these Terms are intended solely for the benefit of the parties and are not intended to confer third-party beneficiary rights upon any other person or entity.
+
+END OF AGREEMENT
