@@ -5,6 +5,7 @@ pragma solidity >=0.6.0 <0.7.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "hardhat/console.sol";
 //learn more: https://docs.openzeppelin.com/contracts/3.x/erc721
 
 // GET LISTED ON OPENSEA: https://testnets.opensea.io/get-listed/step-two
@@ -60,8 +61,8 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
         uint256 endTime_,
         uint256 minGoal_,
         uint256 maxEditions_,
-        string  pledgeBaseUri_,
-        string  bakeBaseUri_
+        string memory pledgeBaseUri_,
+        string memory bakeBaseUri_
     )
     public
     ERC721("ArtBlockCampaign", "ABLK") {
@@ -80,7 +81,7 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
         require(minGoal_ > 0, "ArtBlockCollectible: min goal should be greater than 0");
         minGoal = minGoal_;
 
-        require(maxEditions > 0, "ArtBlockCollectible: max editions should be greater than 0");
+        require(maxEditions_ > 0, "ArtBlockCollectible: max editions should be greater than 0");
         maxEditions = maxEditions_;
 
         pledgeBaseUri = pledgeBaseUri_;
@@ -113,14 +114,15 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     public
     returns (uint256) {
 
+        require(msg.value > 0, "The pledge cannot be zero");
+
         // record who pledged and how much
         _pledgedBalance[msg.sender] = msg.value;
 
-        // now mint the token now
         _tokenIds.increment();
-
         uint256 id = _tokenIds.current();
-        _mint(to, id);
+
+        _mint(msg.sender, id);
         _setTokenURI(id, pledgeBaseUri);
 
         LogCollectorPledged(msg.sender, msg.value);
