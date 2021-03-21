@@ -30,7 +30,7 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     // Each state can be an end state
     // The transition can only happen this way: Pledging -> Baking -> Collecting
     enum PledgeState { Pledging, Baking, Collecting }
-    PledgeState private _pledgeState;
+    PledgeState public pledgeState;
     // TODO: Sandu to define the refunding state (what happens if the goal is not reached or the work is not delivered)
 
     // The artist can modify the URIs of all the minted tokens only after the pledge enters the Baking state
@@ -93,8 +93,8 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
         _setBaseURI(pledgeBaseUri);
         // TODO: make sure the strings are not empty and they are valid URLs
 
-        _pledgeState = PledgeState.Pledging;
-        LogStateChanged(_pledgeState);
+        pledgeState = PledgeState.Pledging;
+        LogStateChanged(pledgeState);
 
         // mint edition 0 to artist
         _mint(artistAddress, _tokenIdCounter.current());
@@ -108,14 +108,14 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
 
     // MODIFIERS
     modifier whilePledging() {
-        require(_pledgeState == PledgeState.Pledging, "Contract does not accept pledges");
+        require(pledgeState == PledgeState.Pledging, "Contract does not accept pledges");
         require(startTime >= now, "Wait until the start date");
         require(now <= endTime, "The pledge window is over");
         _;
     }
 
     modifier whileBacking() {
-        require(_pledgeState == PledgeState.Baking, "Contract does not accept pledges");
+        require(pledgeState == PledgeState.Baking, "Contract does not accept pledges");
         require(now > endTime, "The pledge window is open");
         _;
     }
@@ -132,10 +132,10 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
 
     // anyone can call this
     function refreshState() public {
-        if (_pledgeState == PledgeState.Pledging) {
+        if (pledgeState == PledgeState.Pledging) {
             if ( address(this).balance >= minGoal && now > endTime) {
-                _pledgeState = PledgeState.Baking;  // transition to baking
-                LogStateChanged(_pledgeState);
+                pledgeState = PledgeState.Baking;  // transition to baking
+                LogStateChanged(pledgeState);
             }
         }
     }
@@ -169,8 +169,8 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     // the curator - this is the final state
     function markAsCollecting(string memory ap1Uri, string memory ap2Uri) onlyCurator whileBacking public {
         // TODO: enforce the condition that all tokens have new uris, by using a counter or something
-        _pledgeState = PledgeState.Collecting;
-        LogStateChanged(_pledgeState);
+        pledgeState = PledgeState.Collecting;
+        LogStateChanged(pledgeState);
 
         // mint ap1
         _tokenIdCounter.increment();
