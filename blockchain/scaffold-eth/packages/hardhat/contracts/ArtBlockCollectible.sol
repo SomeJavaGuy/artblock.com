@@ -1,15 +1,10 @@
-pragma solidity >=0.6.0 <0.7.0;
-//SPDX-License-Identifier: MIT
+pragma solidity 0.6.7;
 
-//import "hardhat/console.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "hardhat/console.sol";
-//learn more: https://docs.openzeppelin.com/contracts/3.x/erc721
-
-// GET LISTED ON OPENSEA: https://testnets.opensea.io/get-listed/step-two
-
 
 // The Curator owns the contract
 // The Artist can modify the uri, only after the funding goal is reached
@@ -24,7 +19,7 @@ import "hardhat/console.sol";
 // ipfs uri for pledge
 // ipfs uri for baked stage
 
-contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contract
+contract ArtBlockCollectible is ERC721, Ownable, ReentrancyGuard {  // the curator owns the contract
 
     // The contract can be in any of these states
     // Each state can be an end state
@@ -35,7 +30,7 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
 
     // The artist can modify the URIs of all the minted tokens only after the pledge enters the Baking state
     // AP1 token belongs to the Artist
-    address public artistAddress;
+    address payable public artistAddress;
 
     // AP2 token belongs to the Gallery
     address public galleryAddress;
@@ -57,7 +52,7 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
 
     constructor(
         address curatorAddress_,
-        address artistAddress_,
+        address payable artistAddress_,
         address galleryAddress_,
         uint256 startTime_,
         uint256 endTime_,
@@ -171,10 +166,7 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     }
 
     // the curator - this is the final state
-    function markAsCollecting(string memory ap1Uri, string memory ap2Uri) onlyCurator whileBaking public {
-        pledgeState = PledgeState.Collecting;
-        LogStateChanged(pledgeState);
-
+    function markAsCollecting(string memory ap1Uri, string memory ap2Uri) onlyCurator whileBaking nonReentrant public {
         // mint ap1
         _tokenIdCounter.increment();
         _mint(artistAddress, _tokenIdCounter.current());
@@ -185,6 +177,10 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
         _mint(galleryAddress, _tokenIdCounter.current());
         _setTokenURI(_tokenIdCounter.current(), ap2Uri);
 
-        // TODO: I guess transfer the ether amount to the artist?, Sandu, pls confirm.
+        // transfer the pledged amount to the artist
+        artistAddress.transfer(address(this).balance);
+
+        pledgeState = PledgeState.Collecting;
+        LogStateChanged(pledgeState);
     }
 }
