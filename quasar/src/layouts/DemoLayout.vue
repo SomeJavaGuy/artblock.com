@@ -76,7 +76,7 @@ body {
 <script lang="ts">
 import { ethers } from 'ethers';
 import { enableEtherProvider, useEtherSigner, usePromise } from 'src/service';
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'DemoLayout',

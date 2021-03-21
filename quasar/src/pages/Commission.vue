@@ -10,7 +10,7 @@
       <span class="text">Manage profile</span>
     </router-link>
 
-    <router-link to="/commission-contact" class="call"></router-link>
+    <router-link to="/pledge" class="call"></router-link>
     <router-link to="/exhibition" class="ex"></router-link>
     <img src="assets/01-COMMISSIONS.png" />
   </div>
@@ -128,7 +128,7 @@
 <script lang="ts">
 import { ethers } from 'ethers';
 import { enableEtherProvider, useEtherSigner, usePromise } from 'src/service';
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'DemoLayout',
