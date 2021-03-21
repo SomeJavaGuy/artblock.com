@@ -103,7 +103,7 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
 
     // EVENTS
     event LogCollectorPledged(address pledger, uint256 amount);
-    event LogTokenUriUpdated(uint256 tokenId, string newUri);
+    event LogTokenBaseUriUpdated(string newUri);
     event LogStateChanged(PledgeState newPledgeState);
 
     // MODIFIERS
@@ -160,15 +160,13 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     }
 
     // the artist - only during the baking state
-    function updateTokenUri(uint256 tokenId, string memory newUri) onlyArtist whileBacking public {
-        // TODO: make sure the new uri starts with pledgeBaseUri
-        _setTokenURI(tokenId, newUri);
-        LogTokenUriUpdated(tokenId, newUri);
+    function updateTokenUri() onlyArtist whileBacking public {
+        _setBaseURI(bakeBaseUri);
+        LogTokenBaseUriUpdated(bakeBaseUri);
     }
 
     // the curator - this is the final state
     function markAsCollecting(string memory ap1Uri, string memory ap2Uri) onlyCurator whileBacking public {
-        // TODO: enforce the condition that all tokens have new uris, by using a counter or something
         pledgeState = PledgeState.Collecting;
         LogStateChanged(pledgeState);
 
