@@ -50,6 +50,8 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     string public pledgeBaseUri;
     string public bakeBaseUri;
 
+    mapping(address => uint256) private _pledgedBalance;
+
     constructor(
         address curatorAddress_,
         address artistAddress_,
@@ -63,7 +65,11 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
     )
     public
     ERC721("ArtBlockCampaign", "ABLK") {
+
+        require(artistAddress_ != address(0), "ArtBlockCollectible: invalid artist address");
         artistAddress = artistAddress_;
+
+        require(galleryAddress_ != address(0), "ArtBlockCollectible: invalid gallery address");
         galleryAddress = galleryAddress_;
 
         require(now < startTime_, "ArtBlockCollectible: start time cannot occur in the past");
@@ -88,16 +94,36 @@ contract ArtBlockCollectible is ERC721, Ownable {  // the curator owns the contr
         transferOwnership(curatorAddress_);
     }
 
-    function mintItem(address to, string memory tokenURI)
+
+    // MODIFIERS
+    modifier whilePledging() {
+        require(_pledgeState == PledgeState.Pledging, "Contract does not accept pledges");
+        require(startTime >= now, "Wait until the start date");
+        require(now <= endTime, "The pledge window is over");
+        _;
+    }
+
+    // EVENTS
+    event LogCollectorPledged(address pledger, uint256 amount);
+
+
+    function pledge()
+    whilePledging
+    payable
     public
-    onlyOwner
-    returns (uint256)
-    {
+    returns (uint256) {
+
+        // record who pledged and how much
+        _pledgedBalance[msg.sender] = msg.value;
+
+        // now mint the token now
         _tokenIds.increment();
 
         uint256 id = _tokenIds.current();
         _mint(to, id);
-        _setTokenURI(id, tokenURI);
+        _setTokenURI(id, pledgeBaseUri);
+
+        LogCollectorPledged(msg.sender, msg.value);
 
         return id;
     }
